@@ -1,12 +1,12 @@
-services:                                                                                                                                                          
-    2   - type: web                                                                                                                                                      
-    3     name: youtube-downloader                                                                                                                                       
-    4     runtime: docker      # Corrected: Render uses 'runtime' in Blueprints                                                                                          
-    5     plan: free                                                                                                                                                     
-    6     region: ohio                                                                                                                                                   
-    7     dockerContext: .                                                                                                                                               
-    8     dockerfilePath: Dockerfile  # Corrected: Case-sensitive (lowercase 'f')                                                                                        
-    9     healthCheckPath: /health                                                                                                                                       
-   10     envVars:                                                                                                                                                       
-   11       - key: PORT                                                                                                                                                  
-   12         value: 10000  
+services:
+  - type: web
+    name: youtube-downloader
+    env: docker
+    plan: free
+    region: ohio
+    dockerContext: .
+    dockerpath: Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
