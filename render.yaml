@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: youtube-downloader
+    env: docker
+    plan: free # You can change this to 'starter' if you need more RAM for 4K video merging
+    region: ohio
+    dockerContext: .
+    dockerFilePath: Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
