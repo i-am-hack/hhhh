@@ -1,7 +1,7 @@
 services:
   - type: web
     name: youtube-downloader
-    runtime: docker
+    env: docker
     plan: free
     region: ohio
     dockerfilePath: Dockerfile
